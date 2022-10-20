@@ -1,6 +1,15 @@
 // 모든 리소스가 준비가 되었는가?
 // jquery 를 이용(html, css, js)
 $(document).ready(function () {
+  // modal 기능
+  let modalWrap = $(".modal-wrap");
+  let modalClose = "modal-close-active";
+  let modalCloseBt = $(".modal-close");
+
+  modalCloseBt.click(() => {
+    modalWrap.addClass(modalClose);
+  });
+
   // 전체메뉴 보기 기능
   // .more-wrap 저장해서 활용하자.
   let more_wrap = $(".more-wrap");
